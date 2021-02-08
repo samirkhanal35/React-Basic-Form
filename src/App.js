@@ -1,17 +1,18 @@
+import React from "react";
 import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <form>
-        <label>Email:</label>
+    <div className="form_container">
+      <form onSubmit={(values) => console.log(values)} className="form_element">
+        <label className="labels">Email:</label>
         <input type="text" name="email" />
-        <label>Password:</label>
+        <label className="labels">Password:</label>
         <input type="password" name="password" />
-        <input type="submit" value="Submit" />
+        <input className="labels" type="submit" value="Submit" />
       </form>
     </div>
   );
-}
+};
 
 export default App;
